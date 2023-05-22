@@ -1,0 +1,26 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  labels:
+    app: appdep
+  name: appdep
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: appdep
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        app: appdep
+    spec:
+      containers:
+      - image: 173.212.242.29:5000/app:v1
+        name: image
+        ports:
+        - containerPort: 3000
+      imagePullSecrets:
+      - name: regcred
