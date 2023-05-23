@@ -18,7 +18,7 @@ spec:
         app: appdep
     spec:
       containers:
-      - image: 173.212.242.29:5000/app:v1
+      - image: 173.212.242.29:5000/app:v.2
         name: image
         ports:
         - containerPort: 3000
